@@ -1,3 +1,15 @@
+"""
+Filename:     aoi_calculator.py
+Author:       Mohammadhossein Salari with the help of Claude 3.5 Sonnet
+Email:        mohammadhossein.salari@gmail.com
+Last Modified: 2024/02/06
+Description:  Utility module for calculating minimum Area of Interest (AOI) sizes
+              in eye-tracking studies based on eye tracker accuracy. 
+
+              The module uses visual_angle_converter.py for accurate conversions between
+              visual angles, pixels, and physical measurements. 
+"""
+
 from visual_angle_converter import VisualAngleConverter
 
 def calculate_aoi_size(error_degrees, screen_width_px=1920, screen_height_px=1080, 
