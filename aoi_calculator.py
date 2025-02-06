@@ -42,6 +42,10 @@ def calculate_aoi_size(error_degrees, screen_width_px=1920, screen_height_px=108
     error_pixels_vertical = converter.visual_angle_to_pixels(error_degrees, orientation="vertical")
     
     # Calculate minimum AOI size (adding error margin on each side)
+    #       Target Point
+    #            ↓
+    # |←error→|  ○  |←error→|
+    
     min_aoi_width = error_pixels_horizontal * 2
     min_aoi_height = error_pixels_vertical * 2
     
