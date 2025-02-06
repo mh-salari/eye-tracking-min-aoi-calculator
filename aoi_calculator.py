@@ -45,7 +45,7 @@ def calculate_aoi_size(error_degrees, screen_width_px=1920, screen_height_px=108
     #       Target Point
     #            ↓
     # |←error→|  ○  |←error→|
-    
+
     min_aoi_width = error_pixels_horizontal * 2
     min_aoi_height = error_pixels_vertical * 2
     
@@ -89,15 +89,3 @@ if __name__ == "__main__":
         print(f"Resulting AOI size in visual angles:")
         print(f"  Width: {results['recommended_aoi_size']['width_degrees']:.1f}°")
         print(f"  Height: {results['recommended_aoi_size']['height_degrees']:.1f}°")
-
-# Example of how to use with custom screen parameters:
-"""
-custom_results = calculate_aoi_size(
-    error_degrees=1.0,
-    screen_width_px=2560,    # Your screen width in pixels
-    screen_height_px=1440,   # Your screen height in pixels
-    screen_width_mm=600,     # Your screen width in mm
-    screen_height_mm=340,    # Your screen height in mm
-    distance_mm=750         # Your viewing distance in mm
-)
-"""
